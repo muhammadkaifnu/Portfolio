@@ -1,0 +1,510 @@
+/* ==================== TERMINAL WINDOW ==================== */
+
+.terminal-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid rgba(223, 137, 8, 0.6);
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(223, 137, 8, 0.4), inset 0 0 20px rgba(223, 137, 8, 0.1);
+  z-index: 8000;
+  font-family: 'Courier New', monospace;
+  animation: terminal-glow 3s ease-in-out infinite;
+}
+
+.terminal-header {
+  background: linear-gradient(90deg, rgba(223, 137, 8, 0.2), rgba(180, 21, 255, 0.2));
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(223, 137, 8, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.terminal-btn.close {
+  background: #ff5f56;
+  box-shadow: 0 0 8px rgba(255, 95, 86, 0.6);
+}
+
+.terminal-btn.minimize {
+  background: #ffbd2e;
+  box-shadow: 0 0 8px rgba(255, 189, 46, 0.6);
+}
+
+.terminal-btn.maximize {
+  background: #27c93f;
+  box-shadow: 0 0 8px rgba(39, 201, 63, 0.6);
+}
+
+.terminal-title {
+  font-size: 12px;
+  color: rgba(223, 137, 8, 0.8);
+  text-shadow: 0 0 10px rgba(223, 137, 8, 0.6);
+  flex: 1;
+  text-align: center;
+}
+
+.terminal-content {
+  padding: 12px;
+  color: rgba(223, 137, 8, 0.9);
+  font-size: 12px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(223, 137, 8, 0.5);
+  min-height: 60px;
+}
+
+.terminal-line {
+  animation: terminal-flicker 0.15s infinite;
+}
+
+.terminal-text {
+  color: rgba(180, 21, 255, 0.9);
+  text-shadow: 0 0 8px rgba(180, 21, 255, 0.6);
+}
+
+.terminal-cursor {
+  animation: cursor-blink 1s infinite;
+  margin-left: 2px;
+}
+
+/* ==================== SCANLINES ==================== */
+
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(223, 137, 8, 0.03),
+    rgba(223, 137, 8, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+  animation: scanline-move 8s linear infinite;
+}
+
+/* ==================== NOISE EFFECT ==================== */
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" seed="2"/></filter><rect width="100" height="100" fill="rgba(223,137,8,0.02)" filter="url(%23noise)"/></svg>');
+  pointer-events: none;
+  z-index: 1;
+  animation: noise-shift 0.1s infinite;
+}
+
+/* ==================== RGB SHIFT LINES ==================== */
+
+.rgb-line {
+  position: fixed;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+  z-index: 1;
+  animation: rgb-shift 4s infinite ease-in-out;
+}
+
+.rgb-1 {
+  top: 25%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.3), transparent);
+  animation-delay: 0s;
+}
+
+.rgb-2 {
+  top: 50%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.3), transparent);
+  animation-delay: 1.3s;
+}
+
+.rgb-3 {
+  top: 75%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 255, 0.3), transparent);
+  animation-delay: 2.6s;
+}
+
+/* ==================== HACKER GRID ==================== */
+
+.hacker-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(223, 137, 8, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223, 137, 8, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+  animation: grid-shift 20s linear infinite;
+}
+
+/* ==================== CODE BLOCKS ==================== */
+
+.code-block {
+  position: fixed;
+  background: rgba(223, 137, 8, 0.08);
+  border: 1px solid rgba(223, 137, 8, 0.3);
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: rgba(223, 137, 8, 0.7);
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 20px rgba(223, 137, 8, 0.2);
+  animation: code-float 15s infinite ease-in-out;
+}
+
+.code-bracket {
+  color: rgba(180, 21, 255, 0.6);
+  font-weight: bold;
+}
+
+.code-text {
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(223, 137, 8, 0.5);
+}
+
+.block-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.block-2 {
+  top: 50%;
+  right: 8%;
+  animation-delay: 5s;
+  color: rgba(180, 21, 255, 0.7);
+}
+
+.block-3 {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 10s;
+}
+
+/* ==================== DIGITAL RAIN ==================== */
+
+.digital-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rain-char {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  color: rgba(223, 137, 8, 0.3);
+  text-shadow: 0 0 10px rgba(223, 137, 8, 0.4);
+  animation: rain-fall 8s linear infinite;
+  font-weight: bold;
+}
+
+.rain-0 { left: 5%; animation-delay: 0s; }
+.rain-1 { left: 15%; animation-delay: 0.5s; }
+.rain-2 { left: 25%; animation-delay: 1s; }
+.rain-3 { left: 35%; animation-delay: 1.5s; }
+.rain-4 { left: 45%; animation-delay: 2s; }
+.rain-5 { left: 55%; animation-delay: 2.5s; }
+.rain-6 { left: 65%; animation-delay: 3s; }
+.rain-7 { left: 75%; animation-delay: 3.5s; }
+.rain-8 { left: 85%; animation-delay: 4s; }
+.rain-9 { left: 95%; animation-delay: 4.5s; }
+.rain-10 { left: 10%; animation-delay: 5s; }
+.rain-11 { left: 20%; animation-delay: 5.5s; }
+.rain-12 { left: 30%; animation-delay: 6s; }
+.rain-13 { left: 40%; animation-delay: 6.5s; }
+.rain-14 { left: 50%; animation-delay: 7s; }
+
+/* ==================== PULSE WAVES ==================== */
+
+.pulse-wave {
+  position: fixed;
+  border: 2px solid rgba(223, 137, 8, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: pulse-expand 4s ease-out infinite;
+}
+
+.wave-1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 20%;
+  border-color: rgba(180, 21, 255, 0.4);
+  animation-delay: 1.5s;
+}
+
+.wave-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 40%;
+  animation-delay: 3s;
+}
+
+/* ==================== CORNER BRACKETS ==================== */
+
+.corner-bracket {
+  position: fixed;
+  font-size: 40px;
+  color: rgba(223, 137, 8, 0.3);
+  text-shadow: 0 0 20px rgba(223, 137, 8, 0.4);
+  pointer-events: none;
+  z-index: 1;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  animation: bracket-glow 2s ease-in-out infinite;
+}
+
+.corner-tl {
+  top: 20px;
+  left: 20px;
+}
+
+.corner-tr {
+  top: 20px;
+  right: 20px;
+  transform: scaleX(-1);
+}
+
+.corner-bl {
+  bottom: 20px;
+  left: 20px;
+  transform: scaleY(-1);
+}
+
+.corner-br {
+  bottom: 20px;
+  right: 20px;
+  transform: scale(-1);
+}
+
+/* ==================== NEON DOTS ==================== */
+
+.neon-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: neon-blink 2s ease-in-out infinite;
+}
+
+.dot-1 {
+  top: 30%;
+  left: 25%;
+  background: rgba(223, 137, 8, 0.8);
+  box-shadow: 0 0 15px rgba(223, 137, 8, 0.8);
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  top: 60%;
+  right: 25%;
+  background: rgba(180, 21, 255, 0.8);
+  box-shadow: 0 0 15px rgba(180, 21, 255, 0.8);
+  animation-delay: 0.5s;
+}
+
+.dot-3 {
+  bottom: 30%;
+  left: 35%;
+  background: rgba(223, 137, 8, 0.7);
+  box-shadow: 0 0 12px rgba(223, 137, 8, 0.7);
+  animation-delay: 1s;
+}
+
+.dot-4 {
+  top: 45%;
+  right: 35%;
+  background: rgba(180, 21, 255, 0.7);
+  box-shadow: 0 0 12px rgba(180, 21, 255, 0.7);
+  animation-delay: 1.5s;
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes terminal-glow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(223, 137, 8, 0.4), inset 0 0 20px rgba(223, 137, 8, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(223, 137, 8, 0.6), inset 0 0 30px rgba(223, 137, 8, 0.2);
+  }
+}
+
+@keyframes terminal-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 49%, 100% {
+    opacity: 1;
+  }
+  50%, 99% {
+    opacity: 0;
+  }
+}
+
+@keyframes scanline-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes noise-shift {
+  0% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.06;
+  }
+  100% {
+    opacity: 0.03;
+  }
+}
+
+@keyframes rgb-shift {
+  0%, 100% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes grid-shift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes code-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes rain-fall {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-expand {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes bracket-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(223, 137, 8, 0.3);
+    color: rgba(223, 137, 8, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(223, 137, 8, 0.6);
+    color: rgba(223, 137, 8, 0.6);
+  }
+}
+
+@keyframes neon-blink {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .terminal-window,
+  .scanlines,
+  .noise,
+  .rgb-line,
+  .hacker-grid,
+  .code-block,
+  .digital-rain,
+  .pulse-wave,
+  .corner-bracket,
+  .neon-dot {
+    display: none;
+  }
+}
