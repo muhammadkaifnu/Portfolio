@@ -763,6 +763,7 @@
 @media (max-width: 768px) {
   .code-icon {
     font-size: 18px;
+    opacity: 0.7;
   }
 
   .code-icon-1 {
@@ -773,13 +774,23 @@
     font-size: 20px;
   }
 
+  .code-line {
+    font-size: 13px;
+    opacity: 0.6;
+  }
+
+  .matrix-char {
+    font-size: 18px;
+    opacity: 0.6;
+  }
+
   .dot {
     animation: float-dots 20s infinite ease-in-out;
   }
 
   .orb {
     filter: blur(30px);
-    opacity: 0.1;
+    opacity: 0.12;
   }
 
   .orb-1 {
@@ -799,6 +810,7 @@
 
   .tech-symbol {
     font-size: 16px;
+    opacity: 0.5;
   }
 
   .line {
@@ -828,6 +840,20 @@
 
   .rotating-shape {
     opacity: 0.2;
+  }
+
+  .glitch {
+    width: 120px;
+    height: 45px;
+    opacity: 0.5;
+  }
+
+  .hex-code {
+    font-size: 15px;
+  }
+
+  .neon-line {
+    opacity: 0.5;
   }
 }
 
@@ -1295,48 +1321,102 @@
 }
 
 @media (max-width: 480px) {
-  /* Reduce animation complexity on mobile for performance */
+  /* Optimize animations for mobile - keep them but reduce intensity */
   .code-icon {
+    font-size: 16px;
+    opacity: 0.6;
+  }
+  
+  .code-line {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+  
+  .matrix-char {
+    font-size: 16px;
+    opacity: 0.5;
+  }
+  
+  .glitch {
+    width: 100px;
+    height: 40px;
+    opacity: 0.4;
+  }
+  
+  .scan-line {
+    opacity: 0.3;
+  }
+  
+  .cursor {
+    font-size: 14px;
+    opacity: 0.6;
+  }
+  
+  .data-stream {
+    width: 2px;
+    opacity: 0.5;
+  }
+  
+  .hex-code {
     font-size: 14px;
     opacity: 0.5;
   }
   
-  .code-line,
-  .matrix-char,
-  .glitch,
-  .scan-line,
-  .cursor,
-  .data-stream,
-  .hex-code,
   .neon-line {
-    display: none; /* Hide complex animations on small screens */
+    opacity: 0.4;
   }
   
   .dot {
-    width: 4px;
-    height: 4px;
-    opacity: 0.6;
+    width: 5px;
+    height: 5px;
+    opacity: 0.7;
   }
   
   .orb {
-    filter: blur(40px);
-    opacity: 0.05;
+    filter: blur(35px);
+    opacity: 0.08;
   }
   
   .blink-dot {
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
   }
   
-  /* Keep only essential animations */
-  .tech-symbol,
-  .line,
-  .star,
-  .particle,
-  .pulse-circle,
-  .shooting-star,
-  .bubble,
+  .tech-symbol {
+    font-size: 14px;
+    opacity: 0.4;
+  }
+  
+  .line {
+    opacity: 0.3;
+  }
+  
+  .star {
+    font-size: 16px;
+    opacity: 0.5;
+  }
+  
+  .particle {
+    width: 2px;
+    height: 2px;
+  }
+  
+  .pulse-circle {
+    border-width: 1px;
+    opacity: 0.4;
+  }
+  
+  .shooting-star {
+    height: 50px;
+    opacity: 0.5;
+  }
+  
+  .bubble {
+    border-width: 1px;
+    opacity: 0.4;
+  }
+  
   .rotating-shape {
-    display: none;
+    opacity: 0.15;
   }
 }
