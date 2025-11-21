@@ -1295,7 +1295,48 @@
 }
 
 @media (max-width: 480px) {
-  .animated-bg {
+  /* Reduce animation complexity on mobile for performance */
+  .code-icon {
+    font-size: 14px;
+    opacity: 0.5;
+  }
+  
+  .code-line,
+  .matrix-char,
+  .glitch,
+  .scan-line,
+  .cursor,
+  .data-stream,
+  .hex-code,
+  .neon-line {
+    display: none; /* Hide complex animations on small screens */
+  }
+  
+  .dot {
+    width: 4px;
+    height: 4px;
+    opacity: 0.6;
+  }
+  
+  .orb {
+    filter: blur(40px);
+    opacity: 0.05;
+  }
+  
+  .blink-dot {
+    width: 4px;
+    height: 4px;
+  }
+  
+  /* Keep only essential animations */
+  .tech-symbol,
+  .line,
+  .star,
+  .particle,
+  .pulse-circle,
+  .shooting-star,
+  .bubble,
+  .rotating-shape {
     display: none;
   }
 }

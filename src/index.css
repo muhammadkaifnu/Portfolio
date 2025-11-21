@@ -1,34 +1,43 @@
 /* Light theme (default) */
 :root {
-  --bg-primary: #161513;
-  --bg-secondary: #1a1a1a;
+  --bg-primary: #f5f5f7;
+  --bg-secondary: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: rgba(29, 29, 31, 0.75);
+  --text-tertiary: rgba(29, 29, 31, 0.6);
+  --border-color: rgba(0, 0, 0, 0.12);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --accent-primary: #DF8908;
+  --accent-secondary: #B415ff;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme - Pure Black */
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.75);
   --text-tertiary: rgba(255, 255, 255, 0.6);
   --border-color: rgba(255, 255, 255, 0.12);
-  --card-bg: rgba(40, 40, 40, 0.9);
+  --card-bg: rgba(18, 18, 18, 0.95);
   --accent-primary: #DF8908;
   --accent-secondary: #B415ff;
-  --nav-bg: rgba(7, 7, 12, 0.95);
-}
-
-/* Dark theme */
-.dark {
-  --bg-primary: #0d0d0d;
-  --bg-secondary: #1a1a1a;
-  --text-primary: #e8e8e8;
-  --text-secondary: rgba(232, 232, 232, 0.8);
-  --text-tertiary: rgba(232, 232, 232, 0.6);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --card-bg: rgba(35, 35, 35, 0.95);
-  --accent-primary: #DF8908;
-  --accent-secondary: #B415ff;
-  --nav-bg: rgba(13, 13, 13, 0.98);
+  --nav-bg: rgba(0, 0, 0, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.6);
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent white flash on load - default to black */
+html {
+  background: #000000;
+  overflow-x: hidden;
 }
 
 body {
@@ -36,15 +45,36 @@ body {
   color: var(--text-primary);
   font-family: 'outfit';
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-/* Ensure all elements inherit the theme colors */
-html {
-  background: var(--bg-primary);
-}
+/* Import scroll animations */
+@import './styles/scrollAnimations.css';
 
 h1, h2, h3, h4, h5, h6, p, span, a, button, div {
   color: inherit;
+}
+
+/* Prevent horizontal scroll on all elements */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* ==================== DESIGN SYSTEM ==================== */

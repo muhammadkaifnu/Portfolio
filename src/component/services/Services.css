@@ -1,13 +1,8 @@
 .services {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     margin: 90px 170px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 340px);
-    padding: 0 20px;
 }
 .services-title{
     position: relative;
@@ -34,8 +29,9 @@
 .services-subtitle{
     padding: 0 30px;
     max-width: 780px;
-    color: rgba(255,255,255,0.75);
+    color: var(--text-secondary);
     line-height: 1.7;
+    font-size: 20px;
 }
 .services-container{
     display: grid;
@@ -45,11 +41,11 @@
     margin-top: 20px;
 }
 .services-card{
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid var(--border-color);
     border-radius: 28px;
     padding: 32px;
-    background: rgba(10,12,22,0.95);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+    background: var(--card-bg);
+    box-shadow: 0 25px 45px var(--shadow-color);
     text-align: left;
     cursor: pointer;
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -68,7 +64,7 @@
     font-size: 14px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
+    color: var(--text-tertiary);
 }
 .services-card__header span{
     font-weight: 700;
@@ -80,7 +76,7 @@
     font-size: 30px;
 }
 .services-card__summary{
-    color: rgba(255,255,255,0.78);
+    color: var(--text-secondary);
     line-height: 1.6;
     flex: 1;
 }
@@ -89,7 +85,7 @@
     align-items: center;
     gap: 10px;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 .services-card__cta img{
     width: 20px;
@@ -105,14 +101,14 @@
     z-index: 1100;
 }
 .services-modal__panel{
-    background: #050507;
-    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
     border-radius: 26px;
     padding: 40px;
     max-width: 780px;
     width: min(780px,100%);
     position: relative;
-    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+    box-shadow: 0 40px 70px var(--shadow-color);
 }
 .services-modal__close{
     position: absolute;
@@ -121,18 +117,18 @@
     background: transparent;
     border: none;
     font-size: 32px;
-    color: #fff;
+    color: var(--text-primary);
     cursor: pointer;
 }
 .services-modal__eyebrow{
     letter-spacing: 0.3em;
     text-transform: uppercase;
     font-size: 13px;
-    color: rgba(255,255,255,0.65);
+    color: var(--text-tertiary);
     margin-bottom: 8px;
 }
 .services-modal__description{
-    color: rgba(255,255,255,0.85);
+    color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -141,14 +137,14 @@
 }
 .services-modal__section ul{
     margin: 12px 0 0 18px;
-    color: rgba(255,255,255,0.85);
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 .services-modal__label{
     font-size: 13px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
+    color: var(--text-tertiary);
 }
 .services-modal__chips{
     display: flex;
@@ -157,15 +153,15 @@
     margin-top: 12px;
 }
 .services-modal__chips span{
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid var(--border-color);
     border-radius: 999px;
     padding: 6px 16px;
     font-size: 14px;
+    color: var(--text-secondary);
 }
-@media(max-width: 1200px) {
+@media(max-width: 1100px) {
     .services {
         margin: 80px 90px;
-        width: calc(100% - 180px);
     }
     
     .services-title h1 {
@@ -182,12 +178,11 @@
 }
 @media(max-width:768px){
     .services{
-        margin: 60px 24px;
-        width: calc(100% - 48px);
-        gap: 30px;
+        margin: 60px 40px;
+        gap: 40px;
     }
     .services-title h1 {
-        font-size: 44px;
+        font-size: 52px;
         padding: 0;
     }
     .services-subtitle, 
@@ -196,12 +191,34 @@
     }
     .services-container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
     }
     .services-card {
         padding: 24px;
     }
     .services-card h2 {
         font-size: 24px;
+    }
+}
+
+@media(max-width:480px){
+    .services{
+        margin: 40px 20px;
+        gap: 30px;
+    }
+    .services-title h1{
+        font-size: 36px;
+    }
+    .services-subtitle{
+        font-size: 16px;
+    }
+    .services-card{
+        padding: 20px;
+    }
+    .services-card h2{
+        font-size: 22px;
+    }
+    .services-modal__panel{
+        padding: 24px;
     }
 }

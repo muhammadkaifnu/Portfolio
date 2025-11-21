@@ -21,7 +21,7 @@ function Navbar() {
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('darkMode')
-      const isDark = savedTheme ? JSON.parse(savedTheme) : false
+      const isDark = savedTheme ? JSON.parse(savedTheme) : true // Default to dark mode
       // Apply theme immediately on load
       if (isDark) {
         document.documentElement.classList.add('dark')
@@ -30,7 +30,7 @@ function Navbar() {
       }
       return isDark
     }
-    return false
+    return true // Default to dark mode
   })
 
   const toggleDarkMode = () => {

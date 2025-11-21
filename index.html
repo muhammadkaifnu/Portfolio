@@ -8,6 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Prevent theme flash by applying dark mode immediately -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('darkMode');
+        const isDark = savedTheme ? JSON.parse(savedTheme) : true;
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
