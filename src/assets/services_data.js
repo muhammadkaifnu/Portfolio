@@ -61,18 +61,18 @@ const services_data = [
   },
   {
     s_no: '05',
-    s_name: 'Teaching & Mentorship',
-    tagline: 'Guidance for CS fundamentals',
+    s_name: 'AI Agent Automation',
+    tagline: 'Automating workflows with n8n',
     s_desc:
-      'Course support, debugging sessions, and study plans for OOP, DS, and PF cohorts.',
+      'Custom AI agents and automation workflows to save time and reduce manual tasks.',
     description:
-      'I help students bridge theory with practical labs, review assignments, and create resources that boost confidence.',
+      'I build intelligent automation systems using n8n and AI models to orchestrate complex business logic and data flows.',
     highlights: [
-      'Lab walkthroughs & office hours',
-      'Assignment reviews & feedback',
-      'Career + project mentorship',
+      'Workflow automation with n8n',
+      'Custom AI agent integration',
+      'API connectivity & webhooks',
     ],
-    stack: ['C++', 'Python', 'Git'],
+    stack: ['n8n', 'OpenAI', 'Python'],
   },
 ]
 

@@ -3,91 +3,91 @@ import './Projects.css'
 
 const projects = [
   {
-    title: 'Bank Management System',
-    stack: 'C++ · OOP · WinForms',
+    title: 'FYP: Vehicle Re-Identification',
+    stack: 'AI/Deep Learning · YOLOv8 · OSNet',
     summary:
-      'Desktop experience for account creation, transactions, and admin oversight with a Windows Forms GUI.',
+      'Helpix: AI surveillance system for hit-and-run detection, identifying fleeing vehicles across cameras and mapping routes.',
     details: [
-      'CRUD workflows for customers and accounts',
-      'Authentication + admin dashboards',
-      'File-based persistence tuned for quick lookups',
+      'Accident detection & vehicle re-identification',
+      'Route mapping for law enforcement',
+      'Trained on VeRi-776 & CityFlow datasets',
     ],
   },
   {
-    title: 'Mimo Learning App',
-    stack: 'Requirement Engineering',
+    title: 'Baller.ai',
+    stack: 'MERN Stack · AI',
     summary:
-      'Requirements discovery and documentation for a mobile learning app focused on programming content.',
+      'Comprehensive football platform featuring fixtures, news, match predictions, player market values, and league analytics.',
     details: [
-      'Mapped personas, epics, and acceptance criteria',
-      'Defined data flows and information architecture',
-      'Delivered SRS + UX recommendations to dev team',
+      'Match predictions & league winner forecasting',
+      'Real-time top scorers & assists tracking',
+      'Player market value analysis',
     ],
   },
   {
-    title: 'Quiz Application',
-    stack: 'Java · OOP · Patterns',
+    title: 'Evibe Event Booking',
+    stack: 'PHP · Bootstrap · MySQL',
     summary:
-      'Modular quiz engine leveraging design patterns for maintainability and feature extension.',
+      'Event management platform allowing users to seamlessly post, discover, and book events.',
     details: [
-      'Strategy + Factory patterns for question types',
-      'Timer, scoring, and review modules',
-      'Separation of UI, domain, and persistence layers',
+      'User-friendly event posting & booking',
+      'Responsive design with Bootstrap',
+      'Robust PHP & MySQL backend',
     ],
   },
   {
-    title: 'Blood Bank Platform',
-    stack: 'Django · PostgreSQL',
+    title: 'FoodFront',
+    stack: 'React · Redux',
     summary:
-      'Role-based portal connecting donors, requesters, and admins to streamline blood donation logistics.',
+      'Restaurant booking application featuring interactive menus, chef profiles, and table reservation capabilities.',
     details: [
-      'Inventory tracking and compatibility matching',
-      'Email/SMS style notifications for urgent requests',
-      'Admin analytics for supply forecasting',
+      'Dynamic menu & chef details',
+      'Table reservation system',
+      'Efficient state management with Redux',
     ],
   },
   {
-    title: 'Evibe Event Management',
-    stack: 'HTML/CSS/JS · PHP · MySQL',
+    title: 'Flutter Projects Suite',
+    stack: 'Flutter · ML · Dart',
     summary:
-      'End-to-end booking portal for event planners with dashboards for hosts and attendees.',
+      'A collection of mobile apps including GPA Calculator, Weather, Chat, E-Commerce, and a Safe QR Code Scanner.',
     details: [
-      'Custom CMS for packages and availability',
-      'Responsive public site with booking wizard',
-      'Payment-ready backend with admin approvals',
+      'Safe QR: ML-based malicious URL detection',
+      'Phishing & redirect warnings',
+      'Diverse utility & e-commerce apps',
     ],
   },
   {
-    title: 'Flutter Frontend Suite',
-    stack: 'Flutter · Dart',
+    title: 'Blood Bank System',
+    stack: 'Django · Python',
     summary:
-      'Series of Flutter apps including GPA calculator, Weather, Chat, E‑commerce, Music, To‑Do, and iOS-style calculators.',
+      'Multi-role platform designed to streamline blood donation processes and request management.',
     details: [
-      'Shared design tokens and component library',
-      'Local/offline data storage patterns',
-      'Focus on performance and animation polish',
+      'Multi-role user access control',
+      'Efficient blood donation tracking',
+      'Request management system',
     ],
   },
   {
-    title: 'UI/UX Projects',
-    stack: 'Figma',
+    title: 'UI/UX Design Portfolio',
+    stack: 'Figma · Prototyping',
     summary:
-      'Movie, Grocery, Food Delivery, Nike, Hotel, and Evibe landing pages crafted as high-fidelity concept work.',
+      'High-fidelity designs for Helpix, Movie App, Grocery App, Food Delivery, Nike Landing Page, and Hotel Booking.',
     details: [
-      'Component-driven design systems',
-      'Microcopy + storytelling for each flow',
-      'Developer-ready exports and specs',
+      'Helpix Complete UI/UX Design',
+      'Diverse app & web interface designs',
+      'User-centric prototyping',
     ],
   },
   {
-    title: 'Portfolio Website',
-    stack: 'React · Vite · CSS Modules',
+    title: 'AI Agent Automation',
+    stack: 'n8n · VAPI · AI Agents',
     summary:
-      'This portfolio—highlighting services, work, and contact flows with smooth interactions and responsive layouts.',
+      'Suite of AI automation agents for restaurant ordering, email summarization, and voice reception.',
     details: [
-      'Reusable section system + theme accents',
-      'Project modal interactions and data-driven sections',
-      'Optimized asset loading with Vite',
+      'Restaurant Agent: Orders & Excel updates',
+      'Email Summarizer: Auto-summaries for new emails',
+      'Voice Receptionist: 24/7 calls, booking, Calendar sync',
     ],
   },
 ]
@@ -99,7 +99,7 @@ function Projects() {
         <div className="projects-title">
           <p className="projects-eyebrow">Case Studies</p>
           <h1>Highlighted Projects</h1>
-        
+
         </div>
         <p className="projects-subtitle">
           A snapshot of the platforms, apps, and design systems I&apos;ve built or supported—from

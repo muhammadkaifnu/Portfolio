@@ -6,6 +6,7 @@ import mywork_data from '../../assets/mywork_data'
 
 function MyWork() {
   const [selectedWork, setSelectedWork] = useState(null)
+  const [showAll, setShowAll] = useState(false)
 
   const galleryImages = useMemo(() => {
     if (!selectedWork) return []
@@ -33,10 +34,10 @@ function MyWork() {
     <div id="mywork" className="mywork">
       <div className="mywork-title">
         <h1>My Latest Work</h1>
-    
+
       </div>
       <div className="mywork-container">
-        {mywork_data.map((work) => (
+        {mywork_data.slice(0, showAll ? mywork_data.length : 6).map((work) => (
           <button
             type="button"
             className="mywork-card"
@@ -51,10 +52,19 @@ function MyWork() {
           </button>
         ))}
       </div>
-      <div className="mywork-showmore">
-        <p>Show More</p>
-        <img src={arrow_icon} alt="" />
-      </div>
+      <button
+        type="button"
+        className="mywork-showmore"
+        onClick={() => setShowAll(!showAll)}
+        aria-label={showAll ? "Show less projects" : "Show more projects"}
+      >
+        <p>{showAll ? 'Show Less' : 'Show More'}</p>
+        <img
+          src={arrow_icon}
+          alt=""
+          style={{ transform: showAll ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}
+        />
+      </button>
 
       {selectedWork && (
         <div className="mywork-modal" onClick={handleClose}>

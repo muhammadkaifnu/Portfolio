@@ -22,17 +22,17 @@ function App() {
       <AnimatedBackground />
       <div style={{ position: 'relative', zIndex: 2 }}>
         <ResumeModal />
-        <Navbar/>
-        <Hero/>
-        <About/>
-        <Projects/>
-        <Services/>
-        <TechnicalSkills/>
-        <Experience/>
-        <Education/>
-        <MyWork/>
-        <Contact/>
-        <Footer/>
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <MyWork />
+        <Services />
+        <TechnicalSkills />
+        <Experience />
+        <Education />
+        <Contact />
+        <Footer />
       </div>
     </div>
   )

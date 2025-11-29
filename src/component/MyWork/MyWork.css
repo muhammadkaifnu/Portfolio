@@ -1,37 +1,42 @@
-.mywork{
+.mywork {
     display: flex;
     flex-direction: column;
     gap: 50px;
     margin: 90px 170px;
 }
-.mywork-title{
+
+.mywork-title {
     position: relative;
 }
-.mywork-title h1{
+
+.mywork-title h1 {
     padding: 0 30px;
     font-size: 80px;
     font-weight: 600;
     margin: 0;
-    background: linear-gradient(263deg,#DF8908 -5.06%,#B415ff 106.28%);
+    background: linear-gradient(263deg, #DF8908 -5.06%, #B415ff 106.28%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
-.mywork-title img{
+
+.mywork-title img {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -1;
 
 }
-.mywork-container{
+
+.mywork-container {
     display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
     padding: 0 30px;
     margin-top: 20px;
 }
-.mywork-card{
+
+.mywork-card {
     border: none;
     padding: 0;
     background: transparent;
@@ -41,17 +46,19 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.mywork-card img{
+
+.mywork-card img {
     width: 100%;
     height: 280px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
-.mywork-card__overlay{
+
+.mywork-card__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7,7,7,0.05) 0%, rgba(7,7,7,0.8) 100%);
+    background: linear-gradient(180deg, rgba(7, 7, 7, 0.05) 0%, rgba(7, 7, 7, 0.8) 100%);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -62,57 +69,70 @@
     font-weight: 600;
     letter-spacing: 0.5px;
 }
-.mywork-card:hover{
+
+.mywork-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 35px rgba(0,0,0,0.35);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
 }
-.mywork-card:focus-visible{
+
+.mywork-card:focus-visible {
     outline: 2px solid #ff00ff;
     outline-offset: 4px;
 }
-.mywork-card:hover img{
+
+.mywork-card:hover img {
     transform: scale(1.05);
 }
-.mywork-card:hover .mywork-card__overlay{
+
+.mywork-card:hover .mywork-card__overlay {
     opacity: 1;
 }
-.mywork-showmore{
+
+.mywork-showmore {
     display: flex;
-    gap: 35px;
+    gap: 15px;
     border-radius: 50px;
     border: 2px solid white;
-    padding: 20px 20px;
-  margin: 0 auto;
+    padding: 12px 20px;
+    margin: 0 auto;
     font-weight: 500;
-   
+    background: transparent;
+    color: white;
     transition: 0.6s;
     cursor: pointer;
     justify-content: center;
-   
-    width: 230px;
+    align-items: center;
+
+    width: 180px;
 }
-.mywork-showmore p{
-    font-size: 20px;
-    margin-top: 10px;
+
+.mywork-showmore p {
+    font-size: 16px;
+    margin: 0;
 }
-.mywork-showmore img{
-    margin-bottom: 10px;
+
+.mywork-showmore img {
+    width: 20px;
+    margin: 0;
 }
-.mywork-showmore:hover{
-    gap: 30px;
+
+.mywork-showmore:hover {
+    gap: 20px;
     transition: 0.6s;
 }
-.mywork-modal{
+
+.mywork-modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
     z-index: 1000;
 }
-.mywork-modal__panel{
+
+.mywork-modal__panel {
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: 24px;
@@ -124,7 +144,8 @@
     box-shadow: 0 30px 60px var(--shadow-color);
     position: relative;
 }
-.mywork-modal__close{
+
+.mywork-modal__close {
     position: absolute;
     top: 20px;
     right: 24px;
@@ -135,26 +156,30 @@
     cursor: pointer;
     line-height: 1;
 }
-.mywork-modal__header{
+
+.mywork-modal__header {
     display: flex;
     justify-content: space-between;
     gap: 24px;
     align-items: flex-start;
     margin-bottom: 16px;
 }
-.mywork-modal__eyebrow{
+
+.mywork-modal__eyebrow {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--text-tertiary);
     margin-bottom: 6px;
 }
-.mywork-modal__links{
+
+.mywork-modal__links {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
 }
-.mywork-modal__link{
+
+.mywork-modal__link {
     border: 1px solid var(--border-color);
     border-radius: 999px;
     padding: 10px 22px;
@@ -163,108 +188,132 @@
     font-weight: 500;
     transition: background 0.2s ease, color 0.2s ease;
 }
-.mywork-modal__link:hover{
+
+.mywork-modal__link:hover {
     background: var(--card-bg);
 }
-.mywork-modal__link--primary{
+
+.mywork-modal__link--primary {
     border-color: #ff00ff;
 }
-.mywork-modal__link--primary:hover{
+
+.mywork-modal__link--primary:hover {
     background: #ff00ff;
     color: #050505;
 }
-.mywork-modal__description{
+
+.mywork-modal__description {
     color: var(--text-secondary);
     line-height: 1.7;
     margin-bottom: 24px;
 }
-.mywork-modal__gallery{
+
+.mywork-modal__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 14px;
     margin-bottom: 24px;
 }
-.mywork-modal__gallery img{
+
+.mywork-modal__gallery img {
     width: 100%;
     border-radius: 16px;
     border: 1px solid var(--border-color);
 }
-.mywork-modal__tech{
-    border-top: 1px solid rgba(255,255,255,0.08);
+
+.mywork-modal__tech {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 20px;
 }
-.mywork-modal__tech-label{
+
+.mywork-modal__tech-label {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     color: var(--text-tertiary);
     margin-bottom: 10px;
 }
-.mywork-modal__chips{
+
+.mywork-modal__chips {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.mywork-modal__chips span{
+
+.mywork-modal__chips span {
     border: 1px solid var(--border-color);
     border-radius: 999px;
     padding: 6px 16px;
     font-size: 14px;
     color: var(--text-secondary);
 }
-@media(max-width:768px){
-    .mywork{
+
+@media(max-width:768px) {
+    .mywork {
         gap: 40px;
         margin: 60px 40px;
     }
-    .mywork-title h1{
+
+    .mywork-title h1 {
         padding: 0;
         font-size: 52px;
     }
-    .mywork-title img{
+
+    .mywork-title img {
         width: 140px;
     }
-    .mywork-container{
+
+    .mywork-container {
         grid-template-columns: 1fr;
         padding: 0;
     }
-    .mywork-card img{
+
+    .mywork-card img {
         height: 220px;
     }
-    .mywork-showmore{
-        padding: 16px 40px;
-        font-size: 18px;
+
+    .mywork-showmore {
+        padding: 12px 30px;
+        font-size: 16px;
     }
-    .mywork-modal{
+
+    .mywork-modal {
         padding: 20px;
     }
-    .mywork-modal__panel{
+
+    .mywork-modal__panel {
         padding: 32px 24px;
     }
-    .mywork-modal__header{
+
+    .mywork-modal__header {
         flex-direction: column;
     }
 }
 
-@media(max-width:480px){
-    .mywork{
+@media(max-width:480px) {
+    .mywork {
         margin: 40px 20px;
         gap: 30px;
     }
-    .mywork-title h1{
+
+    .mywork-title h1 {
         font-size: 36px;
     }
-    .mywork-container{
+
+    .mywork-container {
         gap: 20px;
     }
-    .mywork-card img{
+
+    .mywork-card img {
         height: 180px;
     }
-    .mywork-showmore{
+
+    .mywork-showmore {
         width: 100%;
-        padding: 14px 24px;
+        padding: 12px 20px;
     }
-    .mywork-modal__panel{
+
+    .mywork-modal__panel {
         padding: 24px 16px;
     }
 }
