@@ -42,6 +42,25 @@ import n8n1 from './LatestWork/n8n/emai-n8n.jpeg'
 import n8n2 from './LatestWork/n8n/n8nnn2.png'
 import n8n3 from './LatestWork/n8n/n8nnnn3.png'
 
+// SafeScan Project Images and Video
+import safescan1 from './LatestWork/SafeScan/safescan1.png'
+import safescan2 from './LatestWork/SafeScan/safescaan2.png'
+import safescan3 from './LatestWork/SafeScan/safescan3.png'
+import safescan4 from './LatestWork/SafeScan/safescan4.png'
+import safescan5 from './LatestWork/SafeScan/safescan5.png'
+import safescanVideo from './LatestWork/SafeScan/demo.mp4'
+
+// Baller Project Images
+import baller1 from './LatestWork/baller/baller1.png'
+import baller2 from './LatestWork/baller/baller1.1.png'
+import baller3 from './LatestWork/baller/baller2.png'
+import baller4 from './LatestWork/baller/baller3.png'
+import baller5 from './LatestWork/baller/baller4.png'
+import baller6 from './LatestWork/baller/baller5.png'
+import baller7 from './LatestWork/baller/baller6.png'
+import baller8 from './LatestWork/baller/baller7.png'
+import baller9 from './LatestWork/baller/baller8.png'
+
 const mywork_data = [
   {
     w_no: 1,
@@ -102,6 +121,31 @@ const mywork_data = [
     live: null,
     techStack: ['n8n', 'Node.js', 'APIs', 'Webhooks'],
     gallery: [n8n1, n8n2, n8n3],
+  },
+  {
+    w_no: 6,
+    w_name: 'SafeScan - QR & URL Security Scanner',
+    w_img: safescan1,
+    headline: 'ML-powered QR code and URL safety scanner.',
+    description:
+      'An intelligent mobile application that scans QR codes and URLs to detect potential security threats. Using machine learning models trained on malicious URL patterns, SafeScan analyzes and alerts users about unsafe links before they visit them. Features include real-time QR code scanning, URL validation, threat detection, and detailed safety reports. Built with Flutter for cross-platform mobile experience and Python for ML model integration.',
+    repo: 'https://github.com/muhammadkaifnu/safescan',
+    live: 'https://safescan-platform.vercel.app',
+    techStack: ['Flutter', 'Python', 'Machine Learning', 'TensorFlow', 'QR Scanner'],
+    gallery: [safescan1, safescan2, safescan3, safescan4, safescan5],
+    video: safescanVideo,
+  },
+  {
+    w_no: 7,
+    w_name: 'Baller - Football Analytics Platform',
+    w_img: baller1,
+    headline: 'Comprehensive football statistics and match prediction platform.',
+    description:
+      'A full-stack football analytics platform that provides real-time data for top 5 European leagues. Features include live match schedules and results, top scorers leaderboards, league standings, latest football news, and AI-powered match predictions. Uses Python web scraping to aggregate data from multiple sources and machine learning algorithms to predict match outcomes and league winners. Built with MERN stack for robust performance and Tailwind CSS for modern, responsive design.',
+    repo: 'https://github.com/muhammadkaifnu/baller',
+    live: 'https://baller-football.vercel.app',
+    techStack: ['MongoDB', 'Express', 'React', 'Node.js', 'Python', 'Tailwind CSS'],
+    gallery: [baller1, baller2, baller3, baller4, baller5, baller6, baller7, baller8, baller9],
   },
 ]
 
